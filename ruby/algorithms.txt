@@ -1,0 +1,22 @@
+Elevator Robot
+- When a human(s) enter the elevator:
+	- Ask each human which floor to go to.
+		- Press the close button.
+		- Press the floor button that the human said.
+		- When the floor is reached:
+			- Open and hold the door open until human leaves the elevator or wait for 10 seconds
+		- Repeat until there is no human left in elevator
+
+Cooking
+- Check if there is enough ingredient
+	- If there is:
+		- Get all ingredients out.
+		- Chop if needed.
+		- Put into pot to cook.
+		- Cook for 1 hour and check.
+			- If food is done:
+				- Serve and eat
+			- If food is not done:
+				- Cook for 10 more minutes and check again
+	- If there is not enough:
+		- Go do grocery.
