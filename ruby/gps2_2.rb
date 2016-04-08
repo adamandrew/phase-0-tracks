@@ -84,3 +84,13 @@ updateqty("onion", grocery, 1)
 updateqty("ice_cream", grocery, 4)
 removeitem("lemonade", grocery)
 printlist(grocery)
+
+# GPS2.2 Reflection
+=begin
+- I learned that it is easier to code if you specify the input and out put of a method in pseudocode first.
+- We need to assign a quantity to each item so it is better to use a hash with key as the item and quantity as the value.
+- A method returns the last line of code that is evaluated in its body.
+- We can pass anything to a method.
+- You can pass information between methods by passing them as parameters.
+- The concept of testing the method were solidified, and I feel confident in all the concepts.
+=end
