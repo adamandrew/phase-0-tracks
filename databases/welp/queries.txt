@@ -1,0 +1,19 @@
+2.
+sqlite> SELECT * FROM users,reviews,businesses WHERE users.id = reviews.user_id AND  businesses.id = reviews.business_id;
+3|Angela|Jolie|1|5|Very good|2|3|2|Amir's Towing
+4|Steven|Wonder|2|3|Meh|1|4|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling|3|1|Terrible|4|2|4|Lotus Yoga
+2|Mandy|Kaling|4|4|Pretty good|2|2|2|Amir's Towing
+sqlite>
+
+3.
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users, businesses ON users.id = reviews.user_id AND businesses.id = reviews.business_id;
+Angela|Jolie|Amir's Towing|5|Very good
+Steven|Wonder|Grundy Hollow Wedding Chapel|3|Meh
+Mandy|Kaling|Lotus Yoga|1|Terrible
+Mandy|Kaling|Amir's Towing|4|Pretty good
+
+4.
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users, businesses ON users.id = reviews.user_id AND businesses.id = reviews.business_id WHERE business_id = 2;
+Angela|Jolie|Amir's Towing|5|Very good
+Mandy|Kaling|Amir's Towing|4|Pretty good
