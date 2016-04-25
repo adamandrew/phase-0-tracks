@@ -1,0 +1,48 @@
+Release 2:
+
+1.
+sqlite> SELECT * FROM students;
+1|Bob|true|3
+2|Steve|true|2
+3|John|true|1
+4|George|false|2
+5|Rick|false|2
+
+2.
+sqlite> UPDATE students SET qualified="true" WHERE name="George";
+
+3.
+sqlite> SELECT * FROM students, departments WHERE students.department_id = depar
+tments.id;
+1|Bob|true|3|3|Chemistry
+2|Steve|true|2|2|Physics
+3|John|true|1|1|Art
+4|George|true|2|2|Physics
+5|Rick|false|2|2|Physics
+
+4.
+sqlite> SELECT students.name, students.qualified, departments.name FROM students
+ JOIN departments ON students.department_id = departments.id;
+Bob|true|Chemistry
+Steve|true|Physics
+John|true|Art
+George|true|Physics
+Rick|false|Physics
+
+5.
+sqlite> DELETE FROM students WHERE qualified="false";
+
+Release 3:
+
+sqlite> SELECT students.name, students.qualified, departments.name FROM students
+ INNER JOIN departments ON students.department_id = departments.id;
+Bob|true|Chemistry
+Steve|true|Physics
+John|true|Art
+George|true|Physics
+sqlite> SELECT students.name, students.qualified, departments.name FROM students
+ LEFT JOIN departments ON students.department_id = departments.id;
+Bob|true|Chemistry
+Steve|true|Physics
+John|true|Art
+George|true|Physics
